@@ -1,3 +1,14 @@
 ./dl4nlp
 dl4nlp/
 .vscode
+__pycache__/
+*.pyc
+*.safetensors
+*.log
+*.tar.gz
+*.zip
+.rasa/
+*/.rasa/
+*/.ipynb_checkpoints/
+*/.vscode/
+.DS_Store

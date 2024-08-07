@@ -1,0 +1,80 @@
+version: "3.1"
+
+intents:
+  - greet
+  - bot_challenge
+  - out_of_scope
+  - severity_classification
+
+entities:
+  - vehicle
+  - vehicle_status
+  - speed
+  - environment
+  - road_condition
+  - danger
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you today?"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_goodbye:
+  - text: "Goodbye!"
+
+
+
+slots:
+  vehicle:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: vehicle
+  vehicle_status:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: vehicle_status
+  speed:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: speed
+  environment:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: environment
+  road_condition:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: road_condition
+  danger:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: danger
+
+
+forms:
+  severity_classification_form:
+    required_slots:
+      - vehicle
+      - vehicle_status
+      - speed
+      - environment
+      - road_condition
+      - danger
+
+
+actions:
+  - validate_severity_classification_form
+  - action_submit_severity_form
+  

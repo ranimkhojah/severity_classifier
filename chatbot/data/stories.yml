@@ -1,0 +1,16 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- story: classify severity path
+  steps:
+  - intent: severity_classification
+  - action: severity_classification_form
+  - active_loop: null
+  - action: action_submit_severity_form

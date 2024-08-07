@@ -1,0 +1,47 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: out_of_scope
+  examples: |
+    - what's your name?
+    - what are you?
+    - who are you?
+    - what can you do?
+    - what are your capabilities?
+    - what are you capable of?
+    - what are you able to do?
+    - what are you not able to do?
+    - what are you not capable of?
+    - what are you not capable
+
+- intent: severity_classification
+  examples: |
+   - classify the severity of the hazard: [car](vehicle) is [driving](vehicle_status) at [80km/h](speed) [school zone](environment) with some [children](danger) playing.
+   - what is the severity level if a [car](vehicle) is [moving](vehicle_status) towards a [highway](environment) while there is a [truck](danger) approaching from the other side?
+   - how severe is the [danger](danger) if a [car](vehicle) is [driving](vehicle_status) at [100km/h](speed) on a [wet road](road_condition) with [fog](environment) and [rain](environment)?
+   - CAEM produces a lateral motion request causing the [car](vehicle) to [veer](vehicle_status) towards the [cyclist](danger) on the [road](environment). What is the severity level?
+   - "[Car](vehicle) [driving](vehicle_status) on a [highway](environment) at [night](road_condition) with a [car](danger) in the adjacent lane"
+   - car [approaching](vehicle_status) a [roundabout](environment) with [debris](danger) on the road.
